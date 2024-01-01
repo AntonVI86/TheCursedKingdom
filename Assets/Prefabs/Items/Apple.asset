@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec84863c4a8fd749b7824cd3b0ed942, type: 3}
+  m_Name: Apple
+  m_EditorClassIdentifier: 
+  TypeOfItem: 1
+  _label: "\u042F\u0431\u043B\u043E\u043A\u043E"
+  _description: "\u041F\u0440\u043E\u0441\u0442\u043E\u0435 \u044F\u0431\u043B\u043E\u043A\u043E"
+  _maxAmount: 50
+  _icon: {fileID: 782058769, guid: 378473a4ddfa84b45ae3e9cac0d53543, type: 3}
+  _useSfx: {fileID: 8300000, guid: a012483b2f2bad24a96e5f6b7c049b07, type: 3}
+  _eatable: 1
+  _healPower: 2
