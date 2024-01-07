@@ -9,6 +9,7 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private Image _bubble;
     [SerializeField] private TMP_Text _bubbleText;
     [SerializeField] private ItemSO _questItem;
+    [SerializeField] private ItemSO _rewardItem;
     [SerializeField] private int _needAmount;
     [SerializeField] private Inventory _inventory;
 
@@ -26,6 +27,7 @@ public class QuestGiver : MonoBehaviour
                     _bubbleText.text = $"Вот спасибо! Если найдешь еще, приноси!";
 
                     slot.RemoveItem(_needAmount);
+                    _inventory.AddItem(_rewardItem, 1);
                     return;
                 }
             }

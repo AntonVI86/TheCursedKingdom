@@ -32,7 +32,6 @@ public class BlueEye : MonoBehaviour
 
     private IEnumerator ChangeTarget()
     {
-        print("Новая цель");
         yield return new WaitForSeconds(5f);
     }
 }

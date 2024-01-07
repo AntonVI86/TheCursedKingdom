@@ -34,7 +34,6 @@ public class HealthView : MonoBehaviour
 
     private void OnChangeHealthValue(int value)
     {
-        print("Изменение здоровья");
         foreach (var heart in _hearts)
         {
             heart.gameObject.SetActive(false);

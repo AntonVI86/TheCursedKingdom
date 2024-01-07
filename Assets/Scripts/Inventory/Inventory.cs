@@ -5,21 +5,16 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     [SerializeField] private Transform _panel;
-    [SerializeField] public List<Slot> Slots = new List<Slot>();
+    [SerializeField] public List<InventorySlot> Slots = new List<InventorySlot>();
     [SerializeField] private AudioClip _addSfx;
 
-    private void Start()
-    {
-        GetSlots();
-    }
-
-    private void GetSlots()
+    public void GetSlots()
     {
         for (int i = 0; i < _panel.childCount; i++)
         {
-            if (_panel.GetChild(i).GetComponent<Slot>() != null)
+            if (_panel.GetChild(i).GetComponent<InventorySlot>() != null)
             {
-                Slots.Add(_panel.GetChild(i).GetComponent<Slot>());
+                Slots.Add(_panel.GetChild(i).GetComponent<InventorySlot>());
             }
             
         }
@@ -44,9 +39,9 @@ public class Inventory : MonoBehaviour
         {
             if (slot.IsEmpty)
             {
+                slot._isEmpty = false;
                 slot.GetItem(item, amount);
                 SoundPlayer.Instance.PlayOtherSound(_addSfx);
-                slot._isEmpty = false;
                 return true;
             }
         }

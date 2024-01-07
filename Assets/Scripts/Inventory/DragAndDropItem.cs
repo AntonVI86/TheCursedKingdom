@@ -9,7 +9,7 @@ using TMPro;
 /// IDragHandler - Следит за тем не водим ли мы нажатую мышку по объекту
 public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler
 {
-    public Slot oldSlot;
+    public InventorySlot oldSlot;
     private Transform player;
 
     private void Start()
@@ -17,7 +17,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         //ПОСТАВЬТЕ ТЭГ "PLAYER" НА ОБЪЕКТЕ ПЕРСОНАЖА!
         player = GameObject.FindGameObjectWithTag("Player").transform;
         // Находим скрипт InventorySlot в слоте в иерархии
-        oldSlot = transform.GetComponentInParent<Slot>();
+        oldSlot = transform.GetComponentInParent<InventorySlot>();
     }
     public void OnDrag(PointerEventData eventData)
     {
@@ -61,7 +61,7 @@ public class DragAndDropItem : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             // убираем значения InventorySlot
           
         }
-        else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<Slot>() != null)
+        else if(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<InventorySlot>() != null)
         {
             //Перемещаем данные из одного слота в другой
             //ExchangeSlotData(eventData.pointerCurrentRaycast.gameObject.transform.parent.parent.GetComponent<Slot>());

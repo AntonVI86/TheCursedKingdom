@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ec84863c4a8fd749b7824cd3b0ed942, type: 3}
+  m_Name: IronHelmet
+  m_EditorClassIdentifier: 
+  TypeOfItem: 0
+  _label: "\u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439 \u0448\u043B\u0435\u043C"
+  _description: "\u0425\u043E\u0440\u043E\u0448\u0430\u044F \u0437\u0430\u0449\u0438\u0442\u0430
+    \u043D\u0430 \u043F\u0435\u0440\u0432\u043E\u0435 \u0432\u0440\u0435\u043C\u044F.
+    \u041B\u0443\u0447\u0448\u0435, \u0447\u0435\u043C \u043D\u0438\u0447\u0435\u0433\u043E"
+  _maxAmount: 1
+  _price: 280
+  _icon: {fileID: -1288440997, guid: 378473a4ddfa84b45ae3e9cac0d53543, type: 3}
+  _useSfx: {fileID: 0}
+  _eatable: 0
+  _isArmor: 1
+  _healPower: 0
