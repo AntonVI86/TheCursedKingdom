@@ -18,4 +18,26 @@ public class Equipment : MonoBehaviour
             }
         }
     }
+
+    public void AddStats()
+    {
+        foreach (var slot in Slots)
+        {
+            if(slot.Item != null)
+            {
+                HeroStats.Instance.SumStats(1,slot.Item.Armor, slot.Item.MinDamage, slot.Item.MaxDamage, slot.Item.Strength, slot.Item.Agility, slot.Item.Vitality, slot.Item.MaxHealth, slot.Item.AttackSpeed);
+            }
+        }
+    }
+
+    public void RemoveStats()
+    {
+        foreach (var slot in Slots)
+        {
+            if (slot.Item != null)
+            {
+                HeroStats.Instance.SumStats(-1, slot.Item.Armor, slot.Item.MinDamage, slot.Item.MaxDamage, slot.Item.Strength, slot.Item.Agility, slot.Item.Vitality, slot.Item.MaxHealth, slot.Item.AttackSpeed);
+            }
+        }
+    }
 }

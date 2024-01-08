@@ -24,10 +24,16 @@ public class QuestGiver : MonoBehaviour
             {
                 if (slot.Item == _questItem && slot.Amount >= _needAmount)
                 {
-                    _bubbleText.text = $"Вот спасибо! Если найдешь еще, приноси!";
+                    if(_inventory.AddItem(_rewardItem, 1))
+                    {
+                        _bubbleText.text = $"Вот спасибо! Если найдешь еще, приноси!";
+                        slot.RemoveItem(_needAmount);
+                    }
+                    else
+                    {
+                        _bubbleText.text = $"Приходи, когда сможешь забрать награду!";
+                    }
 
-                    slot.RemoveItem(_needAmount);
-                    _inventory.AddItem(_rewardItem, 1);
                     return;
                 }
             }

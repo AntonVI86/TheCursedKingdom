@@ -14,6 +14,10 @@ public class EquipmentSlot : Slot
 
     public ItemType SType => TypeOfSlot;
 
+    private new ItemSO _item;
+
+    public new ItemSO Item => _item;
+
     public void GetItem(ItemSO item)
     {
         _item = item;

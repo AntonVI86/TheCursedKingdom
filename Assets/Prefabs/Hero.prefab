@@ -269,10 +269,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a99131899b2d145b93eddecf28a4b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpCount: 1
-  _damage: 1
-  _radius: 0.3
+  _level: 1
+  _strength: 5
+  _agility: 5
+  _vitality: 5
+  _armor: 0
   _maxHealth: 5
+  _radius: 0.3
+  _minDamage: 1
+  _maxDamage: 3
+  _jumpCount: 1
 --- !u!114 &4040725763574078931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,4 +307,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe4efa9f7a9ec94d8d473cda39a8f6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 0}

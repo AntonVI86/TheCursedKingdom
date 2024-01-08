@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class InventorySlot : Slot
 {
-
     [SerializeField] private TMP_Text _amountText;
     [SerializeField] private int _amount;
 
@@ -90,14 +89,16 @@ public class InventorySlot : Slot
                     {
                         ItemSO tempItem = _item;
                         
-                        RemoveItem(1);
+                        RemoveItem(1);                       
 
                         if (slot.IsEmpty == false) 
                         {
-                            inventory.AddItem(slot.Item, 1);                           
+                            inventory.AddItem(slot.Item, 1);
+                            equipment.RemoveStats();
                         }
 
                         slot.GetItem(tempItem);
+                        equipment.AddStats();
                         
                         break;
 

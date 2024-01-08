@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: 
   TypeOfItem: 13
+  _itemID: 0
   _label: "\u042F\u0431\u043B\u043E\u043A\u043E"
   _description: "\u0421\u044A\u0435\u0434\u043E\u0431\u043D\u043E\u0435. \u041F\u043E\u0432\u044B\u0448\u0430\u0435\u0442
     \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u0435, \u043C\u043E\u0436\u043D\u043E
@@ -24,4 +25,13 @@ MonoBehaviour:
   _useSfx: {fileID: 8300000, guid: a012483b2f2bad24a96e5f6b7c049b07, type: 3}
   _eatable: 1
   _isArmor: 0
+  _strength: 0
+  _agility: 0
+  _vitality: 0
+  _armor: 0
+  _maxHealth: 0
+  _radius: 0
+  _minDamage: 0
+  _maxDamage: 0
+  _attackSpeed: 0
   _healPower: 2

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   TypeOfItem: 3
+  _itemID: 1
   _label: "\u041A\u0430\u043C\u0435\u043D\u044C"
   _description: "\u0420\u0435\u0441\u0443\u0440\u0441 \u0434\u043B\u044F \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430
     \u0437\u0434\u0430\u043D\u0438\u0439 \u0438 \u0441\u043E\u043E\u0440\u0443\u0436\u0435\u043D\u0438\u0439"
@@ -21,4 +22,14 @@ MonoBehaviour:
   _icon: {fileID: 520110929, guid: 378473a4ddfa84b45ae3e9cac0d53543, type: 3}
   _useSfx: {fileID: 0}
   _eatable: 0
+  _isArmor: 0
+  _strength: 0
+  _agility: 0
+  _vitality: 0
+  _armor: 0
+  _maxHealth: 0
+  _radius: 0
+  _minDamage: 0
+  _maxDamage: 0
+  _attackSpeed: 0
   _healPower: 0

@@ -59,7 +59,7 @@ public class HeroAttacker : HeroAnimator
         {
             if (enemy.TryGetComponent(out EnemyHealth monster))
             {                
-                monster.TakeDamage(_stats.Damage);
+                monster.TakeDamage(_stats.SetDamage());
             }
         }
     }
