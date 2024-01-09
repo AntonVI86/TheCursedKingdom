@@ -8,10 +8,6 @@ public class Inventory : MonoBehaviour
     [SerializeField] public List<InventorySlot> Slots = new List<InventorySlot>();
     [SerializeField] private AudioClip _addSfx;
 
-    private void Start()
-    {
-        //AddItem(ItemData.Instance.Items[0], 1);
-    }
     public void GetSlots()
     {
         for (int i = 0; i < _panel.childCount; i++)
