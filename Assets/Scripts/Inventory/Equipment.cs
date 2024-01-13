@@ -19,6 +19,22 @@ public class Equipment : MonoBehaviour
         }
     }
 
+    public bool AddItem(ItemSO item, int amount)
+    {
+        foreach (var slot in Slots)
+        {
+            if (slot.IsEmpty)
+            {
+                slot._isEmpty = false;
+                slot.GetItem(item, amount);
+                //SoundPlayer.Instance.PlayOtherSound(_addSfx);
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void AddStats()
     {
         foreach (var slot in Slots)

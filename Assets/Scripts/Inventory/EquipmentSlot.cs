@@ -8,17 +8,14 @@ using UnityEngine.UI;
 public class EquipmentSlot : Slot
 {
     [SerializeField] private ItemType TypeOfSlot;
+    [SerializeField] private int _amount;
 
     public event UnityAction<string> InfoDispayed;
     public event UnityAction<ItemSO, EquipmentSlot> Selected;
 
     public ItemType SType => TypeOfSlot;
 
-    private new ItemSO _item;
-
-    public new ItemSO Item => _item;
-
-    public void GetItem(ItemSO item)
+    public override void GetItem(ItemSO item, int amount)
     {
         _item = item;
         _isEmpty = false;
@@ -30,6 +27,7 @@ public class EquipmentSlot : Slot
         if (_item != null)
         {            
             NullifySlotData();
+            _item = null;
         }
     }
 

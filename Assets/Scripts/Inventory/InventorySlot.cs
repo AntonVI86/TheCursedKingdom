@@ -61,8 +61,7 @@ public class InventorySlot : Slot
 
     public override void UseItem(Equipment equipment, Inventory inventory)
     {
-        if (_item != null)
-        {
+
             if (_item.Eatable == true)
             {
                 if (HeroStats.Instance.Heal(1))
@@ -77,10 +76,7 @@ public class InventorySlot : Slot
                     InfoDispayed?.Invoke(text);
                 }
             }
-        }
-
-        if (_item != null)
-        {
+        
             if (_item.IsArmor == true)
             {
                 foreach (EquipmentSlot slot in equipment.Slots)
@@ -89,7 +85,6 @@ public class InventorySlot : Slot
                     {
                         ItemSO tempItem = _item;
                         
-                        RemoveItem(1);                       
 
                         if (slot.IsEmpty == false) 
                         {
@@ -97,15 +92,17 @@ public class InventorySlot : Slot
                             equipment.RemoveStats();
                         }
 
-                        slot.GetItem(tempItem);
-                        equipment.AddStats();
+                        slot.GetItem(tempItem, 1);
                         
+                        equipment.AddStats();
+                        RemoveItem(1);
+
                         break;
 
                     }
                 }
             }
-        }
+        
     }
    
     public override void Show(ItemSO item)

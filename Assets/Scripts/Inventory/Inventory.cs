@@ -25,7 +25,12 @@ public class Inventory : MonoBehaviour
         {
             if(slot.Item == item)
             {
-                if(slot.Amount + amount <= item.MaxAmount)
+                if(item.IsArmor == true)
+                {
+                    break;
+                }
+
+                if(slot.Amount + amount < item.MaxAmount)
                 {
                     slot.AddToAmount(amount);
                     SoundPlayer.Instance.PlayOtherSound(_addSfx);
